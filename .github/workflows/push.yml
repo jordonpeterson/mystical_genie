@@ -17,11 +17,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout Code
         uses: actions/checkout@v2
+        
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
 
       # Compile Java
       - name: Set up JDK 11
