@@ -19,12 +19,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout Code
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       # Compile Java
       - name: Set up JDK 11
-      - uses: actions/setup-java@v1
-      - with:
+        uses: actions/setup-java@v1
+        with:
             java-version: 11
 
       # Tests
